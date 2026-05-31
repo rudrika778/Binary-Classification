@@ -1,34 +1,39 @@
-# House Price Prediction using Linear Regression
+# Binary Classification using Logistic Regression
 
 ## What does this project do?
-This project predicts the price of a house based on its area (sq. ft.) and location using a Linear Regression model.
+This project predicts whether a student will Pass or Fail based on the number of hours they studied using a Logistic Regression model.
 
 ## Features used
-- Area (sq. ft.)
-- Location (Lucknow, Delhi, Mumbai)
+- Hours Studied
 
 ## Libraries used
-- Pandas
 - NumPy
-- Scikit-learn
 - Matplotlib
+- Seaborn
+- Scikit-learn
 
 ## How it works
-1. Created a dataset with area, location and price
-2. Converted location into numbers using One Hot Encoding
-3. Trained a Linear Regression model on the data
-4. Predicted prices for new houses
-5. Plotted actual prices vs predicted regression line
+1. Created a dataset with hours studied and pass/fail outcomes
+2. Trained a Logistic Regression model on the data
+3. Predicted pass/fail outcome and probability for new students
+4. Evaluated the model using a Classification Report
+5. Plotted the Sigmoid curve to visualize the decision boundary
+6. Plotted a Confusion Matrix to visualize model performance
 
 ## How to run
 1. Install libraries:
    ```
-   pip install pandas numpy scikit-learn matplotlib
+   pip install numpy matplotlib seaborn scikit-learn
    ```
-2. Open and run `house_price_prediction.ipynb` in Jupyter Notebook
+2. Run `logistic_regression_for_binary_classification.py`
 
 ## Sample Output
-The model predicts different prices for the same area based on location:
-- 1200 sq ft in Mumbai → highest price
-- 1200 sq ft in Delhi → mid range
-- 1200 sq ft in Lucknow → lowest price
+- A student who studied 5.5 hours → Pass with 88% confidence
+- Decision boundary at 0.5 probability threshold
+
+## Key Concepts Covered
+- Logistic Regression for binary classification
+- Sigmoid function and probability prediction
+- Decision boundary
+- Precision, Recall and F1 Score
+- Confusion Matrix
